@@ -1,0 +1,12 @@
+@import './shared/fonts';
+@import './shared/colors';
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: $font-size-default;
+  font-family: $font-family;
+}
