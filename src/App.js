@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import Fylo from './components/Fylo'
 
 
 function App() {
 	return (
-		<div>
-			
-		</div>
+		<Fragment>
+			<Fylo />
+		</Fragment>
 	);
 }
 
