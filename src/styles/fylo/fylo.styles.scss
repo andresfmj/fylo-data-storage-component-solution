@@ -64,13 +64,13 @@
             
             .float-legend {
                 position: absolute;
-                top: -40px;
+                top: -32px;
                 right: 45px;
                 margin: 0;
                 border-top-left-radius: .8rem;
                 border-top-right-radius: .8rem;
                 border-bottom-left-radius: .8rem;
-                padding: .7rem 1rem;
+                padding: .5rem .8rem;
                 background-color: #fff;
 
                 &::after {
