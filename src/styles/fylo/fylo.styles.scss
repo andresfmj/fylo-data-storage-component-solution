@@ -9,133 +9,158 @@
     align-items: center;
     justify-content: center;
 
-    .left-menu {
-        width: 20%;
-        margin: 1.5rem;
-        
-        .logo-header {
-            padding: 2rem 3rem;
-            height: 1rem;
-            background-color: $secondary-color;
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 8rem;
+    .fylo-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+
+        .left-menu {
+            width: 25%;
+            margin: .8rem;
+            
+            .logo-header {
+                padding: 2rem 2rem;
+                height: 1rem;
+                background-color: $secondary-color;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 8rem;
+            }
+    
+            .left-menu-inner {
+                padding: 1rem 2rem 2rem;
+                background-color: $secondary-color;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+    
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    align-content: center;
+                    li {
+                        margin: .4rem;
+                        padding: .6rem;
+                        background-color: $bg-color;
+                        border-radius: .6rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
         }
 
-        .left-menu-inner {
-            padding: 1rem 2rem 2rem;
+        .right-stats {
+            padding: 1rem 3rem;
             background-color: $secondary-color;
-            border-bottom-left-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-
-            ul {
-                list-style-type: none;
+            border-radius: .8rem;
+            width: 32%;
+            margin: .8rem;
+            position: relative;
+            
+            .float-legend {
+                position: absolute;
+                top: -40px;
+                right: 45px;
                 margin: 0;
-                padding: 0;
-                display: flex;
-                align-content: center;
-                li {
-                    margin: .4rem;
-                    padding: .6rem;
-                    background-color: $bg-color;
-                    border-radius: .6rem;
-                    width: 1.5rem;
-                    height: 1.5rem;
+                border-top-left-radius: .8rem;
+                border-top-right-radius: .8rem;
+                border-bottom-left-radius: .8rem;
+                padding: .7rem 1rem;
+                background-color: #fff;
+
+                &::after {
+                    top: 100%;
+                    right: 0;
+                    border: solid transparent;
+                    content: " ";
+                    position: absolute;
+
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 15px 15px 0;
+                    border-color: transparent #fff transparent transparent;
+                }
+
+    
+                h1 {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: $font-big;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+    
+                    .text-small {
+                        margin-left: .6rem;
+                        font-weight: $font-small;
+                        text-transform: uppercase;
+                        font-size: .8rem;
+                    }
                 }
             }
-        }
-
-    }
-
-    .right-stats {
-        padding: 1rem 3rem;
-        background-color: $secondary-color;
-        border-radius: .8rem;
-        width: 25%;
-        margin: 1.5rem;
-        position: relative;
-        
-        .float-legend {
-            position: absolute;
-            top: -40px;
-            right: 45px;
-            margin: 0;
-            padding: 1.2rem 1rem;
-            background-color: #fff;
-
-            h1 {
+    
+            .progress-container {
                 margin: 0;
                 padding: 0;
-                font-weight: $font-big;
                 display: flex;
-                align-items: center;
-
-                .text-small {
-                    margin-left: .6rem;
-                    font-weight: $font-small;
-                    text-transform: uppercase;
-                    font-size: .8rem;
-                }
-            }
-        }
-
-        .progress-container {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-
-            .progress {
-                background-color: $secondary-bg-color;
-                padding: .2rem;
-                border-radius: .8rem;
-
-                .progress-inner {
-                    width: 64%;
-                    background: $primary-color;
-                    padding: .1rem;
+                flex-direction: column;
+    
+                .progress {
+                    background-color: $secondary-bg-color;
+                    padding: .2rem;
                     border-radius: .8rem;
-                    display: flex;
-                    justify-content: flex-end;
-
-                    .progress-dot {
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 8px;
-                        margin: 0;
-                        background-color: $primary-color-light;
+    
+                    .progress-inner {
+                        width: 64%;
+                        background: $primary-color;
+                        padding: .1rem;
+                        border-radius: .8rem;
+                        display: flex;
+                        justify-content: flex-end;
+    
+                        .progress-dot {
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 8px;
+                            margin: 0;
+                            background-color: $primary-color-light;
+                        }
+    
                     }
-
+                }
+    
+                .progress-text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    p {
+                        margin: .5rem 0;
+                        padding: 0;
+                        color: $primary-color-light;
+                        text-transform: uppercase;
+                        font-size: .7rem;
+                        font-weight: $font-big;
+                    }
                 }
             }
-
-            .progress-text {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                
-                p {
-                    margin: .5rem 0;
-                    padding: 0;
+    
+            p {
+                color: $primary-color-dark;
+                font-weight: $font-small;
+                .highlighted {
                     color: $primary-color-light;
-                    text-transform: uppercase;
-                    font-size: .7rem;
                     font-weight: $font-big;
                 }
             }
         }
 
-        p {
-            color: $primary-color-dark;
-            font-weight: $font-small;
-            .highlighted {
-                color: $primary-color-light;
-                font-weight: $font-big;
-            }
-        }
     }
-    
+
 }
 
