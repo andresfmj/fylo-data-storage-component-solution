@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import Legend from './Legend'
-import ProgressBar from '../RightStats/ProgressBar'
+import ProgressBar from './Progress/ProgressBar'
 
 
 function RightStats(props) {
